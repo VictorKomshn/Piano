@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>olyas diary</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+		 <link href="site.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="info-wrapper">
+			<button id="aboutbtn" onclick="showInfo()" style="width: 70px; height: 32px;z-index:1002; margin-left: 16px;">
+				about
+			</button>
+			<div id="info" >
+				<span>
+					We embark on a journey through the digital tapestry, where numbers, words, and algorithms meld into </br> an ecosystem of synesthesia, bridging the gap between human cognition and technological expression
+				</span>
+				<div style="display:flex;gap:25px;margin-right:16px;">
+					<span>
+						Digital Design </br>with Lluís Nacenta
+					</span>
+					<span>
+						Olga Cherevko </br>2024, BAU Barcelona
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="piano-wrapper">
+			<img src="piano.png"/>
+		</div>
+		<button id="1" class="me" onclick="movement(this)" style="left:50%;top:50%;transform: translate(-50%, -50%);">
+			start the journey
+		</button>
+		<div class="bootom-view">
+			<div class="selection-section-wrapper">
+				<div class="switch-styles-wrapper">
+					<button id="1000" onclick="switchStyles(this,'number')">
+					1
+					</button>
+					<button id="1001" class="active" onclick="switchStyles(this,'text')">
+					A
+					</button>
+					<button id="1002" onclick="switchStyles(this,'noteImage')">
+						<svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+							<path d="M3 15.808C2.17467 15.808 1.468 15.514 0.88 14.926C0.293333 14.3394 0 13.6334 0 12.808C0 11.9827 0.293333 11.2764 0.88 10.689C1.46667 10.1017 2.17333 9.80802 3 9.80802C3.38333 9.80802 3.747 9.87602 4.091 10.012C4.435 10.1487 4.738 10.3537 5 10.627V0.192017H9.884V2.73102H6V12.808C6 13.6327 5.706 14.3387 5.118 14.926C4.53 15.5134 3.824 15.8074 3 15.808Z" fill="black"/>
+						</svg>
+					</button>
+					<button id="1002" onclick="switchStyles(this,'note')">
+						A1
+					</button>
+				</div>
+				<div class="progressbar-selector-wrapper">
+					<input id="progressbar-selector" type="range" min="0" max="750" step="250" onchange="changeProgressbar(this.value)" oninput="changeProgressbar(this.value)"/>
+				</div>
+			</div>
+			<div class="progressbar-wrapper">
+				<div class="reset-button-wrapper">
+					<button id="1003" onclick="reset()" style="width: 70px;height: 32px;">
+						reset
+					</button>
+				</div>
+				<div class="progressbar-inner" id="progressbar">
+					
+				</div>
+				<div class="save-button-wrapper">
+					<button id="1004" onclick="save()" style="width: 70px;height: 32px;">
+						save
+					</button>
+				</div>
+				
+			</div>
+			<div class="play-read-buttons-wrapper">
+				<button id="1005" onclick="playComposition()" style="width: 70px;height: 32px;">
+					play
+				</button>
+				<button id="showPianobtn" onclick="showPiano()" style="width: 37px;height: 32px;display:flex">
+					<img src="showPiano.svg" style="margin:auto auto"/>
+				</button>
+				<button id="readbtn" onclick="read()" style="width: 70px;height: 32px;">
+					read
+				</button>
+			</div>
+			</div>
+		<div id="written-text-wrapper">
+		<div id="written-text-inner">
+		</div>
+		</div>
+		    <script src="site-c.js"></script>
+	</body>
+</html>

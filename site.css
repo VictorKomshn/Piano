@@ -1,0 +1,290 @@
+
+*{
+	font-family: "Arial Narrow", Arial, sans-serif;
+
+}
+html, body {
+	background: #ffffff;
+	margin:unset;
+}
+button, p {
+	padding: 0;
+	border: none;
+	position: absolute;
+	background-color: white;
+	font-family: "Arial Narrow", Arial, sans-serif;
+	font-size: 18px;
+	color: #797377;
+	border: none;
+}
+
+.now {
+	color: #130F11;
+}
+
+.title {
+	position: absolute; 
+	top: 200px; 
+	max-width: 300px; 
+	width: max-content;
+	transform: translate(-50%, 0); 
+	left: 50%;
+	text-align: right;
+}
+
+.w:hover,
+.me:hover,
+.you:hover,
+button {
+	cursor: pointer;
+}
+
+.now:hover {
+	text-shadow: 0px 4px 18px rgba(255, 201, 231, 1);
+}
+
+#bio {
+	position: absolute;
+	margin: 0;
+	top: 40px;
+	color: #130F11;
+}
+
+#me {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-weight: 800;
+}
+
+a {
+	color: blue;
+}
+
+a:hover {
+	color: #FAFF00;
+}
+
+#piano-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 200%;
+	display:none;
+}
+
+#piano-wrapper.active{
+	display:initial;
+}
+
+#piano-wrapper img{
+	width: 100%;
+	height: 100%;
+}
+
+.bootom-view{
+	bottom:10px;
+	position:fixed;
+	width:100%;
+	display:flex;
+	gap:10px;
+	flex-direction:column;
+	z-index:1000;
+}
+
+.bootom-view button,.info-wrapper button{
+	all:revert;
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+	background-color: #D9D9D9;
+	font-family: "Arial Narrow", Arial, sans-serif;
+	font-size: 18px;
+}
+
+.switch-styles-wrapper button{
+	width: 37px;
+	height: 32px;
+}
+
+.singing-button{
+	white-space: break-spaces;
+	z-index: 2;
+}
+
+.singing-button:hover, button:hover{
+	background-color: #FAFF00;
+}
+
+.switch-styles-wrapper button.active{
+	background-color:#FAFF00;
+	border: 1px solid #000;
+
+}
+
+.selection-section-wrapper{
+	display:flex;
+	margin:0 auto;
+	flex-direction:column;
+}
+.switch-styles-wrapper{
+	display:flex;
+	gap:10px;
+}
+
+.progressbar-wrapper{
+	display: flex;
+	align-items: center;
+	gap: 78px;
+	justify-content:space-between;
+	padding: 0 16px 0 16px;
+}
+
+.progressbar-inner{
+	display:flex;
+	align-items: flex-start;
+	gap: 9px;
+	width:-webkit-fill-available;
+	flex-wrap: wrap;
+}
+
+.progress-element:hover path,
+.progress-element:hover rect{
+	fill:#FAFF00;
+}
+
+.progress-element:hover .label-for-progress{
+	display:initial;
+	color:#000;
+}
+
+.progress-element:hover{
+	color:#FAFF00;
+}
+
+
+.progress-element{
+	display:flex;
+	flex-direction:column;
+}
+
+.play-read-buttons-wrapper{
+	display:flex;
+	margin:0 auto;
+	gap:10px;
+}
+
+.progressbar-selector-wrapper{
+	margin: 11px 0;
+}
+
+#progressbar-selector{
+	width: 90%;
+	transform: translate(5%);
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	margin-top: -4px; /* Centers thumb on the track */
+	background-color: #000;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	background: #D9D9D9;
+	height: 0.5rem;
+	border-radius: 5px;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+	background: #D9D9D9;
+	height: 0.5rem;
+	border-radius: 5px;
+}
+
+#written-text-wrapper{
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:30%;
+	min-height:200px;
+	transform:translate(-50%,-50%);
+	display:none;
+	background-color:#FAFF00;
+	border:1px solid #000;
+	z-index:1001;
+	overflow-y: auto;
+	  scrollbar-gutter: stable;
+	max-height:59%;
+}
+
+#written-text-wrapper.active{
+	display:flex;
+}
+
+#written-text-inner{
+	margin: 15px auto;
+	text-align: center;
+}
+
+.label-for-progress{
+	display:none;
+}
+
+.info-wrapper {
+	display:flex;
+	gap:22px;
+	margin-top:30px;
+	position: fixed;
+	z-index: 1;
+}
+
+#info{
+	display:none;
+	z-index:1002;
+	width: 100%;
+	justify-content:space-between;
+
+}
+
+#info.active{
+	display:flex;
+}
+
+#aboutbtn.active, #readbtn.active, #showPianobtn.active {
+	background-color:#FAFF00;
+	border: 1px solid #000;
+}
+
+
+
+
+#written-text-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#written-text-wrapper::-webkit-scrollbar-track {
+  background: #FAFF00; 
+}
+ 
+/* Handle */
+#written-text-wrapper::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#written-text-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
