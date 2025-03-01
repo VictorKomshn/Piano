@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 		 <link href="site.css" rel="stylesheet">
 	</head>
 	<body>
@@ -22,7 +23,7 @@
 						Digital Design </br>with Lluís Nacenta
 					</span>
 					<span>
-						Olga Cherevko </br>2024, BAU Barcelona
+						Olga Cherevko </br>BAU Barcelona
 					</span>
 				</div>
 			</div>
@@ -30,9 +31,11 @@
 		<div id="piano-wrapper">
 			<img src="piano.png"/>
 		</div>
+		<div id="main-tree">
 		<button id="1" class="me" onclick="movement(this)" style="left:50%;top:50%;transform: translate(-50%, -50%);">
 			start the journey
 		</button>
+		</div>
 		<div class="bootom-view">
 			<div class="selection-section-wrapper">
 				<div class="switch-styles-wrapper">
